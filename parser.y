@@ -14,7 +14,7 @@
 %token <string> STRING
 %token SEMICOLON
 %token UNKNOWN
-%token BLOCK_START BLOCK_END
+%token '{' '}'
 
 %left   XOR
 %left	PRINT
@@ -32,7 +32,7 @@ lines:
 	;
 
 block:
-	BLOCK_START lines BLOCK_END
+	'{' lines '}'
 	;
 
 line:

@@ -46,8 +46,8 @@ void realocation_string_buffer(void)
 [ \t]+  
 \n      return LF;
 \;      return SEMICOLON;
-\{      return BLOCK_START;
-\}      return BLOCK_END;
+\{      return '{';
+\}      return '}';
 \^      return XOR;
 print   return PRINT;
 
