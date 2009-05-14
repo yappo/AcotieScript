@@ -1,0 +1,9 @@
+*.c
+*.h
+parser.output
+acotiescript
+*.sw[po]
+*.bs
+*.o
+*.bak
+

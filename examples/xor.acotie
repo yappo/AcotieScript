@@ -1,0 +1,3 @@
+#!./acotiescript
+print "xor test\n"
+"おうっふ" ^ "ふっうお"

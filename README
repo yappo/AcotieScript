@@ -1,0 +1,25 @@
+This program is actiescript.
+
+INSTALLATION
+
+    % make
+    % cp acotiescript /usr/bin
+
+EXAMPLE
+
+    #!/usr/bin/acotiescript
+    print "hello!\n"
+    print 'hello!'
+    print "hello!\n" #    this is comment
+    print "hello!\n" //   this is comment
+    print "hello!\n" """  this is comment
+    print "hello!\n" '''  this is comment
+    print "hello!\n" :REM this is comment
+
+    //this is comment
+    #this is comment
+    /*this is comment*/
+    """this is comment
+    '''this is comment
+    <!--this is comment-->
+    REM this is comment

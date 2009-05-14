@@ -1,0 +1,49 @@
+#!./acotiescript
+# hello world script
+
+//comment
+#comment
+/*comment*/
+"""comment
+'''comment
+<!--comment-->
+REM comment
+
+print "Hello, World!    # comment\n"      # おうっふー < Hello, World!
+print "Hello, World!    :REM comment\n"   :REM おうっふー < Hello, World!
+print "こんにちわわ世界 \"\"\" comment\n" """ おうっふー < こんにちわわ世界
+print "こんにちわわ世界 // comment\n"     // おうっふー < こんにちわわ世界
+
+print""print''print"\n"
+
+# escape
+print "こんにちわ
+\tほー\z
+
+
+\'quote\'\"quote\"
+\ttest\n\ttest;";
+
+# escape
+print 'こんにちわ
+\tほー\z
+
+\'quote\'\"quote\"
+\ttest\n\ttest;'
+
+
+# block
+;;
+{
+    print 'Hello, World! 1 - ';
+    {
+        print 'Hello, World! 2 - '; print 'Hello, World! 3'
+    }
+}
+
+print "\n"
+/*
+**
+*/
+/*****/
+;;;
