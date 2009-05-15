@@ -36,12 +36,10 @@ block:
 	'{' lines '}'
 	;
 
-lf:
-	 LF
-	;
-
 line:
-	expression lf
+	expression LF
+	|
+	expression
 	;
 
 semicolon:
