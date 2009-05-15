@@ -60,7 +60,7 @@ print   return PRINT;
     yyerror("おうっふ! 文字列リテラルがEOFまで閉じてないよ!");
     BEGIN(INITIAL);
 }
-<QUOTED_STRING>[^\\\"] {
+<QUOTED_STRING>[^\\\"]+ {
     string_buffer_size += yyleng;
     realocation_string_buffer();
     strcat(string_buffer, yytext);
@@ -99,7 +99,7 @@ print   return PRINT;
     yyerror("おうっふ! 文字列リテラルがEOFまで閉じてないよ!");
     BEGIN(INITIAL);
 }
-<SINGLE_QUOTED_STRING>[^\\\'] {
+<SINGLE_QUOTED_STRING>[^\\\']+ {
     string_buffer_size += yyleng;
     realocation_string_buffer();
     strcat(string_buffer, yytext);
