@@ -140,7 +140,7 @@ int main(int argc, char **argv)
     } else if (source_filename != NULL) {
         FILE* fp = fopen(source_filename, "rb");
         if (!fp) {
-            fprintf(stderr, "おふっふ! ファイルが開かない! '%s'", argv[1]);
+            fprintf(stderr, "おふっふ! ファイルが開かない! '%s'", source_filename);
             exit(-1);
         }
         char buf[BUFSIZ];
