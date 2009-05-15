@@ -73,7 +73,7 @@ int
 yyerror(char const *str)
 {
     extern char *yytext;
-    fprintf(stderr, "おうっふ! 構文エラー '%s'\n", yytext);
+    fprintf(stderr, "おうっふ! 構文エラー %s '%s' \n", str, yytext);
     return 0;
 }
 
