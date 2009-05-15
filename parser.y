@@ -145,6 +145,9 @@ int main(int argc, char **argv)
         while (fgets(buf, sizeof(buf), fp)) {
             if (strncmp(buf, "#!", 2) == 0) {
                 yyin = fp;
+            } else {
+                fclose(fp);
+                yyin = fopen(source_filename, "rb");
             }
             break;
         }
