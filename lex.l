@@ -66,7 +66,7 @@ print   return PRINT;
     strcat(string_buffer, yytext);
 }
 <QUOTED_STRING>\\[^\n] {
-    string_buffer_size++;
+    string_buffer_size += yyleng;
     realocation_string_buffer();
     switch(yytext[yyleng-1]){
     case 't' :
