@@ -136,7 +136,8 @@ int main(int argc, char **argv)
     parse_comandlines(argc, argv);
 
     if (cmdline_source != NULL) {
-        yyin = fropen(0, cmdline_source_read);
+        yy_scan_string(cmdline_source);
+        yyin = stdin;
     } else if (source_filename != NULL) {
         FILE* fp = fopen(source_filename, "rb");
         if (!fp) {
