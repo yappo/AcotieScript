@@ -25,13 +25,18 @@ void init_string_buffer(void)
 }
 void realocation_string_buffer(void)
 {
-    if (string_buffer_size > string_buffer_alloc_size) { 
+    if (string_buffer_size <= string_buffer_alloc_size) {
+        return;
+    }
+
+    while (string_buffer_size > string_buffer_alloc_size) {
         string_buffer_alloc_size *= 2;
-        string_buffer = realloc(string_buffer, string_buffer_alloc_size + 1);
-        if (string_buffer == NULL) {
-            fprintf(stderr, "おうっふ! remallocできない\n");
-            exit(-1);
-        }
+    }
+
+    string_buffer = realloc(string_buffer, string_buffer_alloc_size + 1);
+    if (string_buffer == NULL) {
+        fprintf(stderr, "おうっふ! remallocできない\n");
+        exit(-1);
     }
 }
 
